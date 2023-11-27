@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# User Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The project was started on Vite with Prettier configured
 
-Currently, two official plugins are available:
+This project includes three pages
+- page with all users
+- page about the user
+- 404 page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Manin stack
+- React
+- Typescript
+- React-router-dom
+- Styled components
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
+To run the project:
 ```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+npm i
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Additional information:
+- The project works well on different screens
+- The project has a pages folder, which contains all local components/functions/types/utilities for the development of this page and all global components/functions/types/utilities are in src
+- The project uses static data with an added id to each user to reflect the maximum similarity of work with BE
+- The project supports the necessary errors that may occur (the user array was not received, the user was not found)
+- Much attention has been paid to pagination, which is bound to URL parameters. All options for incorrect parameters entered by the user in the URL are covered

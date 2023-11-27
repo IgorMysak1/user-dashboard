@@ -1,3 +1,5 @@
+import { RouterProvider } from './providers'
+
 export default function App() {
-  return <p>Initial project setup</p>
+  return <RouterProvider />
 }
