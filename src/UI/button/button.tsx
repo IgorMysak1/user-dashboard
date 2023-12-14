@@ -7,12 +7,13 @@ export const Button = ({ children, ...rest }: ButtonProps) => (
 )
 
 const StyledButton = styled.button`
-  background-color: #ffb84d;
+  background-color: #b0ced9;
   border: none;
-  padding: 5px 10px;
+  padding: 6px 10px;
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
+
   &:disabled {
     opacity: 0.6;
   }

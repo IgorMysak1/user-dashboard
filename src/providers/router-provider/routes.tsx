@@ -1,24 +1,42 @@
 import { RouteObject } from 'react-router-dom'
 import { RoutesURL } from '../../types'
-import { UserDashboard, User, NotFoundPage } from '../../pages'
-import { PageWrapper } from '../../components'
+import {
+  UserDashboardPage,
+  UserPage,
+  NotFoundPage,
+  ProfilePage,
+  SignUpPage,
+  SignInPage,
+  ResetPasswordPage,
+} from '../../pages'
 
-const routesSetUp = [
+export const routes: RouteObject[] = [
+  {
+    path: RoutesURL.PROFILE,
+    element: <ProfilePage />,
+  },
   {
     path: RoutesURL.USER_DASHBOARD,
-    page: <UserDashboard />,
+    element: <UserDashboardPage />,
   },
   {
     path: RoutesURL.USER,
-    page: <User />,
+    element: <UserPage />,
   },
   {
     path: RoutesURL.NOT_FOUND_PAGE,
-    page: <NotFoundPage />,
+    element: <NotFoundPage />,
+  },
+  {
+    path: RoutesURL.SIGN_IN,
+    element: <SignInPage />,
+  },
+  {
+    path: RoutesURL.SIGN_UP,
+    element: <SignUpPage />,
+  },
+  {
+    path: RoutesURL.RESET_PASSWORD,
+    element: <ResetPasswordPage />,
   },
 ]
-
-export const routes: RouteObject[] = routesSetUp.map(({ path, page }) => ({
-  path,
-  element: <PageWrapper>{page}</PageWrapper>,
-}))

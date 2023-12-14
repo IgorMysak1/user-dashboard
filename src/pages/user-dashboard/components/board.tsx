@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { paginationSplitter } from '../../../units'
 import { Pagination } from '../../../UI'
 import { PaginationType } from '../../../types'
@@ -21,10 +21,6 @@ export const Dashboard = () => {
   const changePaginationOptions = (options: Partial<PaginationType>) => {
     setPaginationOptions((prevState) => ({ ...prevState, ...options }))
   }
-  useEffect(
-    () => setPaginationOptions(initialPaginationOptions),
-    [filterOptions],
-  )
 
   return (
     <Wrapper>

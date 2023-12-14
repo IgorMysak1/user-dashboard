@@ -33,7 +33,7 @@ export const Pagination = ({
   })
 
   useEffect(() => {
-    pagination.setUpParamsFromUrl(limits)
+    pagination.setUpParamsInUrl(limits)
   }, [])
 
   return (

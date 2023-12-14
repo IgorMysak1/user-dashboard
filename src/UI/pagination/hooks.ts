@@ -40,8 +40,7 @@ export const usePaginationHooks = ({
 
   const changeLimit = (limit: number) =>
     updatePaginationOptionsAndParams(limit, 0)
-
-  const setUpParamsFromUrl = (limits: number[]) => {
+  const setUpParamsInUrl = (limits: number[]) => {
     const defaultLimit = limits[0]
     if (
       // If there are no params in url
@@ -69,7 +68,7 @@ export const usePaginationHooks = ({
   return {
     isPrevOffsetDisabled,
     isNextOffsetDisabled,
-    setUpParamsFromUrl,
+    setUpParamsInUrl,
     prevOffset,
     nextOffset,
     changeLimit,
